@@ -4,4 +4,10 @@ body{
     color:#555;
     font-size: 16px;
     margin: 0;
+    background-color: #ebebeb;
+}
+
+h1{
+    text-decoration: underline;
+    color:#f00;
 }
