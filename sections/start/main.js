@@ -4,13 +4,13 @@ const listRepost = async username => {
         .catch(error => console.error(error));
 
 
-    const markup = repos.map(
+    const markup = "<ul><li>"+repos.map(
         repo => `
-    <li>${repo.name}</li>
+    <a href='${repo.html_url}' target="_blanc">${repo.name}</a>
     `
-    ).join('');
+    ).join('</li><li>') + "</li></ul>";
 
-    const container = document.getElementById('content').innerHTML = `<ul>${markup}</ul>`;
+    const container = document.getElementById('content').innerHTML = markup;
 
 }
 
